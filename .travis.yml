@@ -5,10 +5,10 @@ services:
   - docker
 
 before_install:
-  - docker build -t cygnetops/docker-react -f Dockerfile.dev .
+  - docker build -t rammohanpabba/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run -e CI=true cygnetops/docker-react npm test
+  - docker run -e CI=true rammohanpabba/docker-react npm test
 
 deploy:
   provider: elasticbeanstalk
